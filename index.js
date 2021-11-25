@@ -64,12 +64,12 @@ newspapers.forEach(newspaper => {
 
 
 // welcome.... should be displayed when you go to this '/' page
-app.get('/', (req ,res) => { 
-    res.json("Welcome to my Climate change api")
-})
+// app.get('/', (req ,res) => { 
+//     res.json("Welcome to my Climate change api")
+// })
 
 
-app.get('/news', (req, res) => {
+app.get('/', (req, res) => {
     // axios.get('https://www.theguardian.com/environment/climate-crisis')
     // .then((response) => {           //promise
     //     const html = response.data
@@ -94,7 +94,7 @@ app.get('/news', (req, res) => {
         res.json(articles)
 })
 
-app.get('/news/:newspaperId', async(req, res) => {
+app.get('/:newspaperId', async(req, res) => {
     const newspaperId = req.params.newspaperId
 
     // if the newspaper matches the newspaperId , we go inside to get the url
